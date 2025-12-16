@@ -1,6 +1,7 @@
 package app;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class app {
@@ -82,9 +83,9 @@ public class app {
 				
 			case "4": // Catalogo de animales
 				// Datos de los animales
-				String[] datosPerros = {"Max", "3", "Labrador", "Vacunas al día, sin enfermedades", "Juguetón, amigable con niños", "Ninguna", "Rocky", "5", "Pastor Alemán", "Leve displasia de cadera tratada", "Protector, entrenado", "Ejercicio moderado", "Luna", "2", "Beagle", "Saludable", "Energética, le gusta correr", "Espacio para jugar", "Toby", "4", "Pug", "Problemas respiratorios leves", "Cariñoso, tranquilo", "Evitar ejercicio excesivo", "Daisy", "1", "Golden Retriever", "Vacunas al día", "Muy sociable", "Ninguna"};
-				String[] datosGatos = {"Michi", "2", "Siames", "Saludable", "Independiente, cariñoso", "Ninguna", "Nube", "3", "Persa", "Problemas de piel tratados", "Tranquilo, dormilón", "Cepillado diario", "Coco", "1", "Europeo", "Saludable", "Curioso, le gusta trepar", "Rascadores", "Bella", "4", "Angora", "Esterilizada, sin complicaciones", "Dócil", "Ninguna", "Simba", "5", "Maine Coon", "Control veterinario anual", "Grande, sociable", "Alimentación específica"};
-				String[] datosHurones = {"Pipo", "2", "Hurón estándar", "Desparasitado", "Muy activo", "Jaula grande", "Nala", "1.5", "Hurón albino", "Vacunas al día", "Curiosa y juguetona", "Supervisión constante", "Chispa", "3", "Hurón panda", "Ligera alergia alimentaria", "Le gusta escarbar", "Dieta especial", "Lilo", "2.5", "Hurón negro", "Saludable", "Sociable con humanos", "Ninguna", "Tito", "4", "Hurón sable", "Esterilizado", "Tranquilo", "Limpieza frecuente"};
+				ArrayList<String> dogCatalog = new ArrayList<>(Arrays.asList("Max", "3", "Labrador", "Vacunas al día, sin enfermedades", "Juguetón, amigable con niños", "Ninguna", "Rocky", "5", "Pastor Alemán", "Leve displasia de cadera tratada", "Protector, entrenado", "Ejercicio moderado", "Luna", "2", "Beagle", "Saludable", "Energética, le gusta correr", "Espacio para jugar", "Toby", "4", "Pug", "Problemas respiratorios leves", "Cariñoso, tranquilo", "Evitar ejercicio excesivo", "Daisy", "1", "Golden Retriever", "Vacunas al día", "Muy sociable", "Ninguna"));
+				ArrayList<String> catCatalog = new ArrayList<>(Arrays.asList("Michi", "2", "Siames", "Saludable", "Independiente, cariñoso", "Ninguna", "Nube", "3", "Persa", "Problemas de piel tratados", "Tranquilo, dormilón", "Cepillado diario", "Coco", "1", "Europeo", "Saludable", "Curioso, le gusta trepar", "Rascadores", "Bella", "4", "Angora", "Esterilizada, sin complicaciones", "Dócil", "Ninguna", "Simba", "5", "Maine Coon", "Control veterinario anual", "Grande, sociable", "Alimentación específica"));
+				ArrayList<String> ferretCatalog = new ArrayList<>(Arrays.asList("Pipo", "2", "Hurón estándar", "Desparasitado", "Muy activo", "Jaula grande", "Nala", "1.5", "Hurón albino", "Vacunas al día", "Curiosa y juguetona", "Supervisión constante", "Chispa", "3", "Hurón panda", "Ligera alergia alimentaria", "Le gusta escarbar", "Dieta especial", "Lilo", "2.5", "Hurón negro", "Saludable", "Sociable con humanos", "Ninguna", "Tito", "4", "Hurón sable", "Esterilizado", "Tranquilo", "Limpieza frecuente"));
 				
 				System.out.println("Bienvenido al cátalogo de adopción de mascotas"
 						+ "\nColoca el número del animal que quieres ver "
@@ -99,19 +100,19 @@ public class app {
 				case "1":
 					System.out.println("Has seleccionado: perros."
 							+ "\nAquí tienes 5 disponibles: ");
-					printCatalog(datosPerros);
+					printCatalog(dogCatalog);
 					break;
 				
 				case "2":
 					System.out.println("Has seleccionado: gatos."
 							+ "\nAquí tienes 5 disponibles: ");
-					printCatalog(datosGatos);
+					printCatalog(catCatalog);
 					break;
 					
 				case "3":
 					System.out.println("Has seleccionado: hurónes."
 							+ "\nAquí tienes 5 disponibles: ");
-					printCatalog(datosHurones);
+					printCatalog(ferretCatalog);
 					break;
 				
 				default:
@@ -506,14 +507,14 @@ public class app {
         System.out.println("Sus respuestas han sido guardadas.");
 	}
 
-	private static void printCatalog(String[] datosAnimales) {
-		for (int i=0; i<datosAnimales.length; i=i+6) {
-			System.out.println("Nombre: "+datosAnimales[i]
-					+"\n - Edad: "+datosAnimales[i+1]
-					+"\n - Raza: "+datosAnimales[i+2]
-					+"\n - Historial Médico: "+datosAnimales[i+3]
-					+"\n - Características: "+datosAnimales[i+4]
-					+"\n - Necesidades Especiales: "+datosAnimales[i+5]
+	private static void printCatalog(ArrayList<String> datosAnimales) {
+		for (int i=0; i<datosAnimales.size(); i=i+6) {
+			System.out.println("Nombre: "+datosAnimales.get(i)
+					+"\n - Edad: "+datosAnimales.get(i+1)
+					+"\n - Raza: "+datosAnimales.get(i+2)
+					+"\n - Historial Médico: "+datosAnimales.get(i+3)
+					+"\n - Características: "+datosAnimales.get(i+4)
+					+"\n - Necesidades Especiales: "+datosAnimales.get(i+5)
 					+"\n");
 		}		
 	}
