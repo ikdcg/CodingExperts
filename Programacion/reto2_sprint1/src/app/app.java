@@ -523,7 +523,10 @@ public class app {
 		Scanner sc = new Scanner(System.in);
 		
 		for (boolean salir=false; salir==false;) {
-			System.out.println("[CONFIGURACION DE CUENTA]\n1 : Cerrar sesion\n2 : Eliminar cuenta\n3 : Volver al menu principal\n>> ");
+			System.out.println("[CONFIGURACION DE CUENTA]"
+					+ "\n1 : Cerrar sesion"
+					+ "\n2 : Eliminar cuenta"
+					+ "\n3 : Volver al menu principal\n>> ");
 			String input = sc.next();
 			sc.nextLine();
 			
