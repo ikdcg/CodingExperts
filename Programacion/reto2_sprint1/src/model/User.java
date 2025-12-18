@@ -6,19 +6,21 @@ public class User {
 	private String password;
 	private boolean admin;
 	
-	// Constructores
+	// Constructor 1
 	public User(String name, String password) {
 		this.name = name;
 		this.password = password;
+		// Por defecto
+		this.admin = false;
 	}
-	
+	// Constructor 2
 	public User(String name, String password, boolean admin) {
 		this.name = name;
 		this.password = password;
 		this.admin = admin;
 	}
 	
-	// Metodos y funciones
+	// Getters & setters
 	public String getName() {
 		return name;
 	}
@@ -43,6 +45,7 @@ public class User {
 		this.admin = admin;
 	}
 
+	// Metodos y funciones
 	@Override
 	public String toString() {
 		String result = "Nombre: "+this.name

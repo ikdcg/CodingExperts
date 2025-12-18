@@ -7,7 +7,7 @@ public class Donation {
 	private double amount;
 	private String paymentMethod;
 	
-	// Constructores
+	// Constructor 1
 	public Donation(String name, String email, double amount, String paymentMethod) {
 		this.name = name;
 		this.email = email;
@@ -15,7 +15,7 @@ public class Donation {
 		this.paymentMethod = paymentMethod;
 	}
 	
-	// Metodos y funciones
+	// Getters & setters
 	public String getName() {
 		return name;
 	}
@@ -31,7 +31,8 @@ public class Donation {
 	public String getPaymentMethod() {
 		return paymentMethod;
 	}
-
+	
+	// Metodos y funciones
 	@Override
 	public String toString() {
 		String result = "Nombre: "+this.name

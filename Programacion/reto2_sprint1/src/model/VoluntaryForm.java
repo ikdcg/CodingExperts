@@ -10,22 +10,19 @@ public class VoluntaryForm {
 	private String availability;
 	private String reason;
 	
-	// Constructores
-	public VoluntaryForm(String name, String surname, String email, int phoneNum, String activity,
-			String availability) {
-		super();
+	// Constructor 1
+	public VoluntaryForm(String name, String surname, String email, int phoneNum, String activity, String availability) {
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
 		this.phoneNum = phoneNum;
 		this.activity = activity;
 		this.availability = availability;
+		// Por defecto
 		this.reason = null;
 	}
-	
-	public VoluntaryForm(String name, String surname, String email, int phoneNum, String activity, String availability,
-			String reason) {
-		super();
+	// Constructor 2
+	public VoluntaryForm(String name, String surname, String email, int phoneNum, String activity, String availability, String reason) {
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
@@ -35,7 +32,7 @@ public class VoluntaryForm {
 		this.reason = reason;
 	}
 	
-	// Metodos y funciones
+	// Getters & setters
 	public String getName() {
 		return name;
 	}
@@ -64,6 +61,7 @@ public class VoluntaryForm {
 		return reason;
 	}
 
+	// Metodos y funciones
 	@Override
 	public String toString() {
 		String result = "Nombre: "+this.name
