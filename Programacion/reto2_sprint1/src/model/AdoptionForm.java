@@ -10,22 +10,20 @@ public class AdoptionForm {
 	private String animalName;
 	private String reason;
 	
-	// Constructores
+	// Constructor 1
 	public AdoptionForm(String name, String surname, String email, int phoneNum, String address, String animalName) {
-		super();
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
 		this.phoneNum = phoneNum;
 		this.address = address;
 		this.animalName = animalName;
+		// Por defecto
 		this.reason = null;
 		
 	}
-	
-	public AdoptionForm(String name, String surname, String email, int phoneNum, String address, String animalName,
-			String reason) {
-		super();
+	// Constructor 2
+	public AdoptionForm(String name, String surname, String email, int phoneNum, String address, String animalName, String reason) {
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
@@ -35,7 +33,7 @@ public class AdoptionForm {
 		this.reason = reason;
 	}
 	
-	// Metodos y funciones
+	// Getters & setters
 	public String getName() {
 		return name;
 	}
@@ -63,7 +61,8 @@ public class AdoptionForm {
 	public String getReason() {
 		return reason;
 	}
-
+	
+	// Metodos y funciones
 	@Override
 	public String toString() {
 		String result = "Nombre: "+this.name

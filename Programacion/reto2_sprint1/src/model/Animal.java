@@ -6,34 +6,33 @@ public class Animal {
 	private String type;
 	private int age;
 	private String breed;
-	private String medicalHistory;
+	private String medHist;
 	private String caracteristics;
 	private String specialNeeds;
 	
-	// Constructores
+	// Constructor 1
 	public Animal(String name, String type, int age, String breed) {
 		this.name = name;
 		this.type = type;
 		this.age = age;
 		this.breed = breed;
 		// Por defecto
-		this.medicalHistory = "No hay historial medico.";
+		this.medHist = "No hay historial medico.";
 		this.caracteristics = "No se ha detallado caracteristicas.";
 		this.specialNeeds = "No se ha detallado necesidades especiales.";
 	}
-	
+	// Constructor 2
 	public Animal(String name, String type, int age, String breed, String medicalHistory, String caracteristics, String specialNeeds) {
 		this.name = name;
 		this.type = type;
 		this.age = age;
 		this.breed = breed;
-		this.medicalHistory = medicalHistory;
+		this.medHist = medicalHistory;
 		this.caracteristics = caracteristics;
 		this.specialNeeds = specialNeeds;
 	}
 	
-	// Metodos y funciones
-	
+	// Getters & setters
 	public int getAge() {
 		return age;
 	}
@@ -47,11 +46,11 @@ public class Animal {
 	}
 
 	public String getMedicalHistory() {
-		return medicalHistory;
+		return medHist;
 	}
 
 	public void setMedicalHistory(String medicalHistory) {
-		this.medicalHistory = medicalHistory;
+		this.medHist = medicalHistory;
 	}
 
 	public String getCaracteristics() {
@@ -77,7 +76,8 @@ public class Animal {
 	public String getBreed() {
 		return breed;
 	}
-
+	
+	// Metodos y funciones
 	@Override
 	public String toString() {
 		String result = "Nombre: "+this.name
@@ -85,7 +85,7 @@ public class Animal {
 				+"\nEdad: "+this.age
 				+"\nRaza: "+this.breed
 				+"\nHistorial medico:\n"
-				+this.medicalHistory
+				+this.medHist
 				+"\nCaracteristicas:\n"
 				+this.caracteristics
 				+"\nNecesidades especiales:\n"
